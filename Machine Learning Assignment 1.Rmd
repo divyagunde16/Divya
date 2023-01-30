@@ -1,0 +1,40 @@
+---
+title: "FML Assignment 1"
+author: "Divya Gunde"
+date: "2023-01-28"
+output:
+  word_document: default
+  html_document:
+    df_print: paged
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r Athlete Events}
+
+############ Fetching Dataset #######
+data=read.csv("C:/Users/gunde/OneDrive/Desktop/athlete events.csv")
+############ Printing Data Table 
+print(data)
+
+####### Mean Variables###########
+mean(data$Age)
+mean(data$Year)
+
+########## Plot Graph ############
+plot(x = data$Age,y = data$Year,
+     xlab = "Age",
+     ylab = "Year",
+     main = "Athlete Events"
+)
+########## Historical Graph ##############
+str(data)
+data$Age -> Age
+hist(Age,ylim=c(0,80))
+
+```
+
